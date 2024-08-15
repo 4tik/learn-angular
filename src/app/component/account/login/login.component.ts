@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {FormGroup, FormsModule, ReactiveFormsModule, FormControl} from '@angular/forms';
 import {MatDividerModule} from '@angular/material/divider';
@@ -24,7 +24,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
 
   singInForm: FormGroup = new FormGroup({
     username: new FormControl(''),
@@ -32,4 +32,8 @@ export class LoginComponent {
   });
 
   constructor (){}
+
+  ngOnInit(): void {
+    
+  }
 }
